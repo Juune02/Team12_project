@@ -9,7 +9,7 @@ from matplotlib import style
 font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
 rc('font', family=font_name)
 
-print('블랙서바이벌 영원회귀의 티어 분포표 \n')
+print('영원회귀: 블랙서바이벌의 티어 분포도 \n')
 webpage = urllib.request.urlopen('https://dak.gg/bser/statistics/tier')
 soup = BeautifulSoup(webpage, 'html.parser')
 tables = soup.select('table')
@@ -41,5 +41,5 @@ plt.setp(pie_outside, width = width_num, edgecolor = 'white')
 pie_inside, plt_labels, junk = \
 ax.pie(L2, radius=(1.3 - width_num), labels=list1, labeldistance=0.75, autopct='%1.1f%%')
 plt.setp(pie_inside, width=width_num, edgecolor='white')
-plt.title('블랙서바이벌 영원회귀의 티어 분포표', fontsize=30)
+plt.title('영원회귀: 블랙서바이벌의 티어 분포도', fontsize=30)
 plt.show()
